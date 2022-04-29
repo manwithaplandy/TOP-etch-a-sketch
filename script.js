@@ -2,12 +2,12 @@ const container = document.getElementById('container');
 const startButton = document.getElementById('startButton');
 
 let gridSize = 10; // Default grid size of 10
-container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr`; // Set number of columns to grid size
 buildGrid(); // Build initial Grid
 addHoverListeners(); // Add listeners to initial grid
 
 // Function => Create grid of divs using provided quantity
 function buildGrid() {
+        container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr`; // Set number of columns to grid size
         for (let i = 1; i <= (gridSize * gridSize); i++) { // Square grid size to get total number of squares
             const div = document.createElement('div');
             div.classList.add(i, 'square');

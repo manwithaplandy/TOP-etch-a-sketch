@@ -17,8 +17,6 @@ body {
     height: 50vh;
     place-items: stretch;
     text-align: center;
-    gap: 1vh;
-    padding: 1vh;
     outline: 1px solid black;
 }
 
