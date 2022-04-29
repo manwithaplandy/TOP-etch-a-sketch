@@ -27,7 +27,7 @@ function addHoverListeners() {
     squares = Array.from(document.getElementsByClassName('square'));
     squares.forEach((square) => {
     square.addEventListener('mouseover', () => addBGColor(square))
-    square.addEventListener('mouseout', () => remBGColor(square))
+    // square.addEventListener('mouseout', () => remBGColor(square))
     });
 }
 addHoverListeners();
@@ -37,6 +37,7 @@ let addBGColor = (square) => {
     square.classList.add('hoverOver'); 
 }
 
+// Function to remove color from squares
 let remBGColor = (square) => {
     setTimeout(square.classList.remove('hoverOver'), 2000);
 }
