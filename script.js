@@ -9,9 +9,9 @@ addHoverListeners(); // Add listeners to initial grid
 // Function => Create grid of divs using provided quantity
 function buildGrid() {
         for (let i = 1; i <= (gridSize * gridSize); i++) { // Square grid size to get total number of squares
-        const div = document.createElement('div');
-        div.classList.add(i, 'square');
-        container.appendChild(div);
+            const div = document.createElement('div');
+            div.classList.add(i, 'square');
+            container.appendChild(div);
     }
 }
 
@@ -42,9 +42,13 @@ let remBGColor = (square) => {
 }
 
 // Start button prompts for grid size
-startButton.addEventListener('click', () => setGridSize());
+startButton.addEventListener('click', () => setGrid());
 
-let setGridSize = () => {
+// Get grid size from button prompt, then 
+let setGrid = () => {
     gridSize = prompt('How big would you like the grid?');
     gridSize = parseInt(gridSize); // Convert to int
+    removeGrid();
+    buildGrid();
+    addHoverListeners();
 }
