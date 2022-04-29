@@ -4,19 +4,24 @@ const startButton = document.getElementById('startButton');
 let gridSize = 10; // Default grid size of 10
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr`; // Set number of columns to grid size
 
-// Create grid of divs using provided quantity
-for (let i = 1; i <= (gridSize * gridSize); i++) { // Square grid size to get total number of squares
-    const div = document.createElement('div');
-    div.classList.add(i, 'square');
-    container.appendChild(div);
+// Function => Create grid of divs using provided quantity
+let buildGrid = () => {
+        for (let i = 1; i <= (gridSize * gridSize); i++) { // Square grid size to get total number of squares
+        const div = document.createElement('div');
+        div.classList.add(i, 'square');
+        container.appendChild(div);
+    }
 }
 
-squares = Array.from(document.getElementsByClassName('square'));
-
-squares.forEach((square) => {
+// Define function for adding listeners to squares
+let addHoverListeners = () => {
+    squares = Array.from(document.getElementsByClassName('square'));
+    squares.forEach((square) => {
     square.addEventListener('mouseover', () => addBGColor(square))
     square.addEventListener('mouseout', () => remBGColor(square))
-});
+    });
+}
+addHoverListeners();
 
 // Change background color when mouse is over square
 let addBGColor = (square) => {
