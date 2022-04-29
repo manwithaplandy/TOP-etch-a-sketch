@@ -46,7 +46,7 @@ startButton.addEventListener('click', () => setGrid());
 
 // Get grid size from button prompt, then 
 let setGrid = () => {
-    gridSize = prompt('How big would you like the grid?');
+    gridSize = Math.min(prompt('How big would you like the grid?'), 100);
     gridSize = parseInt(gridSize); // Convert to int
     removeGrid();
     buildGrid();
