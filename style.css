@@ -1,19 +1,25 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+#startButton {
+    margin-bottom: 10vh;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 25vh;
-    height: 25vh;
+    width: 50vh;
+    height: 50vh;
     place-items: stretch;
     text-align: center;
     gap: 1vh;
     padding: 1vh;
+    outline: 1px solid black;
 }
 
 .hoverOver {
