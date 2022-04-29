@@ -15,6 +15,13 @@ function buildGrid() {
     }
 }
 
+// Clean up old grid before building new grid
+function removeGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 // Define function for adding listeners to squares
 function addHoverListeners() {
     squares = Array.from(document.getElementsByClassName('square'));
