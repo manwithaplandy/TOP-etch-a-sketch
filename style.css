@@ -7,7 +7,11 @@ body {
 }
 
 #startButton {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
+}
+
+#clearButton {
+    margin-top: 5vh;
 }
 
 #container {

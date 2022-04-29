@@ -1,5 +1,6 @@
 const container = document.getElementById('container');
 const startButton = document.getElementById('startButton');
+const clearButton = document.getElementById('clearButton');
 
 let gridSize = 10; // Default grid size of 10
 buildGrid(); // Build initial Grid
@@ -53,3 +54,9 @@ let setGrid = () => {
     buildGrid();
     addHoverListeners();
 }
+
+// Remove all background colors from all squares
+clearButton.addEventListener('click', () => {
+    squares.forEach((square) => remBGColor(square));
+}
+)
